@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shading">
+
+
+                <LinearLayout
+                    android:id="@+id/linear_lokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/dropdown"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginBottom="19dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    <RelativeLayout
+                        android:layout_width="156dp"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginRight="162dp"
+                        android:layout_marginLeft="15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+
+                        <TextView
+                            android:id="@+id/dashboard_textView_Lokasimu"
+                            android:layout_width="156dp"
+                            android:layout_height="42dp"
+                            android:text="Lokasimu"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:id="@+id/dashboard_textView_TempatLokasimu"
+                            android:layout_width="156dp"
+                            android:layout_height="42dp"
+                            android:text="Jalan Lodaya no. 69"
+                            android:layout_marginTop="12dp"
+                            android:textSize="16dp"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_below="@+id/linear_lokasi"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="11dp"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:background="@drawable/kotak"
+                    android:paddingLeft="5dp"
+                    android:hint="Mau Cuci Mobil Dimana Hari Ini?"
+                    android:drawablePadding="10dp"
+                    android:textSize="14dp"/>
+
+                <!--        <SearchView-->
+                <!--            android:layout_marginTop="60dp"-->
+                <!--            android:layout_marginLeft="10dp"-->
+                <!--            android:layout_marginRight="10dp"-->
+                <!--            android:layout_marginBottom="11dp"-->
+                <!--            android:layout_width="340dp"-->
+                <!--            android:layout_height="34dp"-->
+                <!--            android:background="@drawable/kotak" />-->
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cari_kategori"
+                android:layout_below="@+id/relative"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cari Berdasarkan Kategori"
+                android:textSize="14dp"
+                android:textColor="#707070"/>
+
+            <GridLayout
+                android:id="@+id/grid"
+                android:layout_below="@+id/cari_kategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="3"
+                android:useDefaultMargins="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="20dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/oval"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"/>
+
+                        <TextView
+                            android:id="@+id/terbaru"
+                            android:layout_marginTop="67dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_width="50dp"
+                            android:layout_height="26dp"
+                            android:text="Terbaru Minggu Ini"
+                            android:textSize="11sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/oval"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"/>
+
+                        <TextView
+                            android:id="@+id/promo"
+                            android:layout_marginTop="67dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_width="50dp"
+                            android:layout_height="26dp"
+                            android:text="Promo"
+                            android:textSize="10sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/oval"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"/>
+
+                        <TextView
+                            android:id="@+id/terdekat"
+                            android:layout_marginTop="67dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_width="50dp"
+                            android:layout_height="26dp"
+                            android:text="Terdekat"
+                            android:textSize="10sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="13dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/oval"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"/>
+
+                        <TextView
+                            android:id="@+id/terbaik"
+                            android:layout_marginTop="67dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_width="50dp"
+                            android:layout_height="26dp"
+                            android:text="Terbaik"
+                            android:textSize="10sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="20dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/oval"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"/>
+
+                        <TextView
+                            android:id="@+id/tempat_cuci"
+                            android:layout_marginTop="67dp"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tempat Cuci Murah"
+                            android:textSize="10sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:src="@drawable/oval"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"/>
+
+                        <TextView
+                            android:id="@+id/cuci_steam"
+                            android:layout_marginTop="67dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_width="50dp"
+                            android:layout_height="26dp"
+                            android:text="Cuci Steam"
+                            android:textSize="10sp"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/grid"
+                android:id="@+id/recycler_view_terfavorit">
+
+                <TextView
+                    android:id="@+id/text_fav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Terfavorit"
+                    android:textSize="14dp"
+                    android:textColor="#707070" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:scrollbars="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9.5dp"
+                    android:layout_below="@id/text_fav" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/recycler_view_terfavorit">
+
+                <TextView
+                    android:id="@+id/text_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Histori Cuci"
+                    android:textColor="#707070"
+                    android:textSize="14dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_dua"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/text_history"
+                    android:layout_marginTop="9.5dp"
+                    android:scrollbars="horizontal" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
